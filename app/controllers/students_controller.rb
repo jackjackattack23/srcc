@@ -7,7 +7,7 @@ class StudentsController < ApplicationController
     @students = Student.all
     #respond_with(@students)
     @string = @students.collect(&:email1).join(';')
-    @string2 = @string + @students.collect(&:email2).join(';')
+    @string2 = @string + ";" + @students.collect(&:email2).join(';')
   end
 
   def show
