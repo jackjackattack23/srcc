@@ -41,7 +41,7 @@ class StudentsController < ApplicationController
   def movers
     @students = Student.where(:classroom => "Movers")
     @string = @students.collect(&:email1).join(';')
-    @string2 = @string + @students.collect(&:email2).join(';')
+    @string2 = @string + ";" + @students.collect(&:email2).join(';')
   end
   def wigglers
     @students = Student.where(:classroom => "Movers")
