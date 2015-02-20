@@ -2,22 +2,22 @@
 <% if user_signed_in? %>
 
   <li><%= link_to 'Add Child', new_student_path %></li>
-  <li><%= link_to 'All Children', students_path %></li>
+  <li><%= link_to 'All Children', students_path(classroom: 'bar_value')  %></li>
   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Classes <span class="caret"></span></a>
     <ul class="dropdown-menu" role="menu">
-      <li><%= link_to 'Movers', movers_path %></li>
-      <li><%= link_to 'Wigglers', wigglers_path %></li>
-      <li><%= link_to 'Shakers', shakers_path %></li>
+      <li><%= link_to 'Movers', students_path(classroom: 'Movers')  %></li>
+      <li><%= link_to 'Wigglers', students_path(classroom: 'Wigglers')  %></li>
+      <li><%= link_to 'Shakers', students_path(classroom: 'Shakers')  %></li>
       <li class="divider"></li>
-      <li><%= link_to 'Experimenters', experimenters_path %></li>
-      <li><%= link_to 'Creators', creators_path %></li>
-      <li><%= link_to 'Investigators', investigators_path %></li>
+      <li><%= link_to 'Experimenters', students_path(classroom: 'Experimenters')  %></li>
+      <li><%= link_to 'Creators', students_path(classroom: 'Creators')  %></li>
+      <li><%= link_to 'Investigators', students_path(classroom: 'Investigators')  %></li>
       <li class="divider"></li>
-      <li><%= link_to 'Dreamers', dreamers_path %></li>
-      <li><%= link_to 'Inventors', inventors_path %></li>
+      <li><%= link_to 'Dreamers', students_path(classroom: 'Dreamers')  %></li>
+      <li><%= link_to 'Inventors', students_path(classroom: 'Inventors')  %></li>
       <li class="divider"></li>
-      <li><%= link_to 'Explorers', explorers_path %></li>
-      <li><%= link_to 'K/D', kds_path %></li>
+      <li><%= link_to 'Explorers', students_path(classroom: 'Explorers')  %></li>
+      <li><%= link_to 'K/D', students_path(classroom: 'K/D')  %></li>
     </ul>
  </li>
 <% else %>
