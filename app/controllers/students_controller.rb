@@ -6,8 +6,8 @@ class StudentsController < ApplicationController
   def index
     @students = Student.all
     #respond_with(@students)
-    @string = @students.collect(&:email1).join(';')
-    @string2 = @string + ";" + @students.collect(&:email2).join(';')
+    create_email_string(@students)
+   
   end
 
   def show
@@ -40,11 +40,48 @@ class StudentsController < ApplicationController
   
   def movers
     @students = Student.where(:classroom => "Movers")
-    @string = @students.collect(&:email1).join(';')
-    @string2 = @string + ";" + @students.collect(&:email2).join(';')
+    create_email_string(@students)
   end
+  
   def wigglers
     @students = Student.where(:classroom => "Movers")
+  end
+  
+  def shakers
+    @students = Student.where(:classroom => "Shakers")
+  end
+  
+  def creators
+    @students = Student.where(:classroom => "Creators")
+  end
+  
+  def experimenters
+    @students = Student.where(:classroom => "Experimenters")
+  end
+  
+  def investigators
+    @students = Student.where(:classroom => "Investigators")
+  end
+  
+  def dreamers
+    @students = Student.where(:classroom => "Dreamers")
+  end
+  
+  def inventors
+     @students = Student.where(:classroom => "Inventors")
+  end
+   
+  def explorers
+    @students = Student.where(:classroom => "Explorers")
+  end
+  
+  def explorers
+    @students = Student.where(:classroom => "Explorers")
+  end
+  
+  def create_email_string(string)
+     @string = string.collect(&:email1).join(';')
+     @string2 = @string + ";" + string.collect(&:email2).join(';')
   end
    
   private
