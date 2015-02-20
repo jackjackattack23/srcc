@@ -37,9 +37,7 @@
 </table>
 
 <br>
-<%= mail_to @string2 do %>
-  <strong>Send Email</strong>
-<% end %>
+<%= button_to('Send Email', 'mailto:' + @string2, class: "btn btn-primary")%>
 
 <br>
 <br>

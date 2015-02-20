@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   get '/inventors' => 'students#inventors', as: 'inventors'
   get '/explorers' => 'students#explorers', as: 'explorers'
   get '/kds' => 'students#kds', as: 'kds'
+  post 'students/new' => 'students#new'
   
  end
