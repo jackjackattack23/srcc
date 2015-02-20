@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Dreamers</h1>
-
-<table>
+<div class="row">
+  <div class="col-md-6">
+   <table class="table">       
   <thead>
     <tr>
       <th>Name</th>
@@ -35,7 +36,8 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
+</div>
 
 <br>
 <%= button_to('Send Email', 'mailto:' + @string2, class: "btn btn-primary")%>
