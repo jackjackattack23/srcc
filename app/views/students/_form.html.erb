@@ -43,9 +43,10 @@
     <%= f.label :email4 %><br>
     <%= f.text_field :email4 %>
   </div>
-  <div class="field">
-    <%= f.label :classroom %><br>
-    <%= f.text_field :classroom %>
+   <div class="field">
+  <%= f.select :classroom, 
+      options_for_select([['Creators','Creators'],['Dreamers','Dreamers'],['Experimenters','Experimenters'],['Explorers','Explorers'],['Inventors','Inventors'],['Investigators','Investigators'],['K/D','K/D'],['Movers','Movers'],['Shakers','Shakers'],['Wigglers','Wigglers']], params[:area]),
+      {}, { :class => 'span3 controls controls-row' } %>
   </div>
   <div class="actions">
     <%= f.submit %>
