@@ -25,7 +25,7 @@
   <tbody>
     <% @students.each do |student| %>
       <tr>
-        <td><%= student.name %></td>
+        <td><%= student.last_name %>, <%= student.first_name %></td>
         <td><%= student.parent1 %></td>
         <td><%= student.parent2 %></td>
         <td><%= student.email1 %></td>
@@ -35,7 +35,7 @@
         <td><%= student.classroom %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
-        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
